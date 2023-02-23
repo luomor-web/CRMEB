@@ -2,7 +2,7 @@
 cd docker
 sudo docker-compose up -d
 
-8011
+http://82.157.54.206:8011/
 ```
 
 ```shell
