@@ -1,6 +1,8 @@
 ```shell
 cd docker
 sudo docker-compose up -d
+
+8011
 ```
 
 ```shell
