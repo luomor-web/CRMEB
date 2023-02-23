@@ -1,6 +1,7 @@
 ```shell
 cd docker
 sudo docker-compose up -d
+sudo docker-compose ps
 
 http://82.157.54.206:8011/
 ```

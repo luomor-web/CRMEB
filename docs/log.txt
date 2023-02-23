@@ -4,3 +4,11 @@ Creating crmeb_redis ... done
 Creating crmeb_php   ... done
 Creating crmeb_mysql ... done
 Creating crmeb_nginx ... done
+
+sudo docker-compose ps
+   Name                  Command               State                                     Ports
+---------------------------------------------------------------------------------------------------------------------------------
+crmeb_mysql   /entrypoint.sh --character ...   Up      0.0.0.0:3307->3306/tcp
+crmeb_nginx   /docker-entrypoint.sh ngin ...   Up      0.0.0.0:8011->80/tcp
+crmeb_php     /usr/sbin/php-fpm7.4 -O          Up      0.0.0.0:20002->20002/tcp, 0.0.0.0:20003->20003/tcp, 0.0.0.0:9000->9000/tcp
+crmeb_redis   docker-entrypoint.sh redis ...   Up      0.0.0.0:6379->6379/tcp
