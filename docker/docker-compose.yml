@@ -31,7 +31,7 @@ services:
     networks:
       app_net:
         # 固定子网ip，网段必须在子网络192.168.*.*
-        ipv4_address: 192.168.10.1
+        ipv4_address: 172.16.0.16
   # redis 容器
   redis:
     container_name: crmeb_redis
