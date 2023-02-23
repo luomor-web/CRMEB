@@ -11,7 +11,16 @@ chown -R www-data:www-data .env
 chown -R www-data:www-data .version
 chown -R www-data:www-data .constant
 
+mysql
+crmeb
+123456
+
+redis
+123456
+
 http://82.157.54.206:8011/
+admin
+admin123
 ```
 
 ```shell
