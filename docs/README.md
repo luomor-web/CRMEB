@@ -3,6 +3,14 @@ cd docker
 sudo docker-compose up -d
 sudo docker-compose ps
 
+docker exec -it crmeb_php bash
+chown -R www-data:www-data public/
+chown -R www-data:www-data runtime/
+chown -R www-data:www-data backup
+chown -R www-data:www-data .env
+chown -R www-data:www-data .version
+chown -R www-data:www-data .constant
+
 http://82.157.54.206:8011/
 ```
 
