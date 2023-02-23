@@ -6,7 +6,7 @@ services:
     image: daocloud.io/library/mysql:5.7.5-m15 #M1芯片可以采用这个镜像
     # image: mysql:5.7 #一般电脑可以用这个镜像
     ports:
-      - 3306:3306
+      - 3307:3306
     # 环境变量
     environment:
       TZ: Asia/Shanghai
@@ -46,7 +46,7 @@ services:
       - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
     networks:
       app_net:
-        ipv4_address: 192.168.10.10
+        ipv4_address: 172.16.0.10
   # php 容器
   phpfpm:
     container_name: crmeb_php #指定容器名
@@ -70,7 +70,7 @@ services:
       - ./php/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
     networks:
       app_net:
-        ipv4_address: 192.168.10.90
+        ipv4_address: 172.16.0.90
 #    command: /bin/bash -c "php -v"
   # nginx 容器
   nginx:
@@ -94,12 +94,12 @@ services:
       - ./nginx/log:/etc/nginx/log
     networks:
       app_net:
-        ipv4_address: 192.168.10.80
+        ipv4_address: 172.16.0.80
 networks: #网络配置
   app_net: #网络名称
     driver: bridge
     ipam: #网络配置
       config:
-        - subnet: 192.168.0.0/16 #IP区间
-          gateway: 192.168.10.100
+        - subnet: 172.16.0.0/16 #IP区间
+          gateway: 172.16.0.1
 
