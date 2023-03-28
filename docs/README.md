@@ -21,6 +21,9 @@ redis
 http://82.157.54.206:8011/
 admin
 admin123
+
+http://82.157.54.206:8011/admin/
+http://82.157.54.206:8011/static/html/pc.html
 ```
 
 ```shell
